@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --modal-duration: 1s;
+  --modal-color: #428bca;
+}
+
+article {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #c5b2b2;
+
+  & > * {
+    animation: slide 1s linear;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateY(100vh);
+      opacity: 0%;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100%;
+    }
+  }
+
+  & > section {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    flex-basis: 100%;
+    transition: all 0.8s ease-in-out;
+
+    & > button {
+      display: grid;
+      place-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      & > img {
+        width: 80%;
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+
+        &:hover {
+          width: 80%;
+          filter: drop-shadow(0 0px 0px black);
+          z-index: 1;
+          background: transparent;
+        }
+      }
+    }
+    //
+    &:hover {
+      flex-basis: 200%;
+    }
+  }
+  //
+  & > form {
+    // display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    & > div {
+      margin: 15% auto;
+      width: 60%;
+      height: 30%;
+      display: grid;
+      grid-template-rows: 20% 80%;
+      grid-template-columns: 100%;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+        0 7px 20px 0 rgba(0, 0, 0, 0.17);
+      animation-name: modalopen;
+      animation-duration: var(--modal-duration);
+      overflow: hidden;
+
+      & > header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: #ffffff;
+        background: var(--modal-color);
+        & > span {
+          font-size: 40px;
+          color: #fff;
+          &:hover {
+            color: #000000;
+            cursor: pointer;
+          }
+          &:focus {
+            color: #000000;
+            cursor: pointer;
+          }
+        }
+        & > h2 {
+          line-height: 35px;
+        }
+      }
+
+      & > main {
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
