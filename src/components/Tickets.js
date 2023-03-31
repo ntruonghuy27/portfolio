@@ -25,25 +25,8 @@ export default function Tickets() {
 }
 //
 function Ticket(props) {
-  //   const [curStyle, setStyle] = React.useState(Object);
-  //
-  //   const handleMouseOver = (e) => {
-  //     setStyle({
-  //       flexBasis: "200%",
-  //     });
-  //   };
-  //   //
-  //   const handleMouseLeave = (e) => {
-  //     setStyle({
-  //       flexBasis: "100%",
-  //     });
-  //   };
   return (
-    <section
-    //   onMouseLeave={handleMouseLeave}
-    //   onMouseOver={handleMouseOver}
-    //   style={curStyle}
-    >
+    <section>
       <button
         className="btn-modal"
         type="button"

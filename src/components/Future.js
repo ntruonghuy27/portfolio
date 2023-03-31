@@ -16,10 +16,6 @@ export default function Future() {
 function VideoBG() {
   return (
     <div className="videoBG">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
       <video autoPlay muted loop>
         <source src={tickets.videobg} type="video/mp4"></source>
       </video>
@@ -45,9 +41,8 @@ function TextDiv1() {
 function TextDiv2() {
   return (
     <div className="text-2">
-      <p>
-        It's the <b>SCIMA's GAME CENTER</b>.
-      </p>
+      <p>It's the</p>
+      <h4>SCIMA's GAME CENTER.</h4>
     </div>
   );
 }
@@ -63,4 +58,8 @@ function TextDiv3() {
       </p>
     </div>
   );
+}
+//
+async function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

@@ -16,9 +16,9 @@ article.future {
   & > div.videoBG {
     position: relative;
 
-    margin-left: 200px;
+    margin-left: 12%;
 
-    max-width: 80%;
+    max-width: 60%;
     max-height: 80%;
 
     display: grid;
@@ -27,43 +27,34 @@ article.future {
     overflow: hidden;
     animation: slideCDiv 1.5s ease-in-out;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #1a1717;
+      height: 48%;
+      width: 12%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #1a1717;
+      height: 52%;
+      width: 5%;
+      z-index: 1;
+    }
+
     & > video {
       height: auto;
       max-width: 100%;
 
       object-fit: cover;
-    }
-
-    & > div {
-      position: absolute;
-      width: 20%;
-      height: 52%;
-      background-color: #1a1717;
-
-      z-index: 2;
-
-      &:nth-child(1) {
-        top: 0;
-        left: 0;
-      }
-
-      &:nth-child(2) {
-        width: 9%;
-        bottom: 0;
-        left: 0;
-      }
-
-      &:nth-child(3) {
-        width: 1%;
-        top: 0;
-        right: 0;
-      }
-
-      &:nth-child(4) {
-        width: 7%;
-        bottom: 0;
-        right: 0;
-      }
+      position: relative;
     }
   }
 
@@ -72,8 +63,8 @@ article.future {
     height: 45%;
 
     position: absolute;
-    top: 13%;
-    left: 3%;
+    top: 14%;
+    left: 2%;
 
     animation: slideText 1.5s ease-in-out;
     z-index: 3;
@@ -92,15 +83,53 @@ article.future {
 
   & > div.text-2 {
     position: absolute;
-    width: 950px;
-    height: 80px;
+    width: 850px;
+    height: 70px;
     left: 4%;
-    bottom: 20%;
+    bottom: 18%;
     font-size: 60px;
+
+    display: flex;
+    align-items: center;
 
     overflow: hidden;
     z-index: 3;
     animation: slideText 1.5s ease-in-out;
+
+    & > p {
+      width: 190px;
+    }
+
+    & > h4 {
+      width: 660px;
+      //
+      border-right: 5px solid red;
+      overflow: hidden;
+
+      animation: typewriter 10s steps(45) 1s infinite forwards,
+        blinkTextCursor 1s steps(45) infinite normal;
+      white-space: nowrap;
+
+      @keyframes typewriter {
+        0% {
+          width: 660px;
+        }
+        10% {
+          width: 0px;
+        }
+        100% {
+          width: 660px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: red;
+        }
+        to {
+          border-right-color: transparent;
+        }
+      }
+    }
   }
 
   & > div.text-3 {
