@@ -2,8 +2,6 @@ article.future {
   width: 100%;
   height: 100vh;
 
-  position: relative;
-
   font-style: normal;
   font-weight: 400;
 
@@ -16,10 +14,9 @@ article.future {
   & > div.videoBG {
     position: relative;
 
-    margin-left: 12%;
-
-    max-width: 60%;
-    max-height: 80%;
+    margin-top: 16%;
+    margin-left: 16%;
+    min-height: 60%;
 
     display: grid;
     place-items: center;
@@ -34,7 +31,7 @@ article.future {
       left: 0;
       background-color: #1a1717;
       height: 48%;
-      width: 12%;
+      width: 20%;
       z-index: 1;
     }
 
@@ -45,13 +42,13 @@ article.future {
       right: 0;
       background-color: #1a1717;
       height: 52%;
-      width: 5%;
+      width: 15%;
       z-index: 1;
     }
 
     & > video {
       height: auto;
-      max-width: 100%;
+      max-width: 80%;
 
       object-fit: cover;
       position: relative;
@@ -60,34 +57,34 @@ article.future {
 
   & > div.text-1 {
     width: 35%;
-    height: 45%;
+    height: 25%;
 
     position: absolute;
-    top: 14%;
-    left: 2%;
+    top: 25%;
+    left: 1%;
 
     animation: slideText 1.5s ease-in-out;
     z-index: 3;
     overflow: hidden;
 
     & > h1 {
-      font-size: 60px;
+      font-size: 40px;
     }
 
     & > p {
-      font-size: 20px;
-      margin-top: 2%;
-      margin-left: 10%;
+      font-size: 18px;
+      margin-top: 4%;
+      margin-left: 2%;
     }
   }
 
   & > div.text-2 {
     position: absolute;
-    width: 850px;
+    width: 580px;
     height: 70px;
     left: 4%;
-    bottom: 18%;
-    font-size: 60px;
+    bottom: 24%;
+    font-size: 40px;
 
     display: flex;
     align-items: center;
@@ -97,11 +94,11 @@ article.future {
     animation: slideText 1.5s ease-in-out;
 
     & > p {
-      width: 190px;
+      width: 130px;
     }
 
     & > h4 {
-      width: 660px;
+      width: 450px;
       //
       border-right: 5px solid red;
       overflow: hidden;
@@ -112,13 +109,13 @@ article.future {
 
       @keyframes typewriter {
         0% {
-          width: 660px;
+          width: 450px;
         }
         10% {
           width: 0px;
         }
         100% {
-          width: 660px;
+          width: 450px;
         }
       }
       @keyframes blinkTextCursor {
@@ -134,25 +131,25 @@ article.future {
 
   & > div.text-3 {
     position: absolute;
-    width: 30%;
-    height: 32%;
-    right: 5%;
-    bottom: 15%;
+    width: 20%;
+    height: 20%;
+    right: 11%;
+    bottom: 23%;
 
     color: #fff;
+    text-align: center;
 
     overflow: hidden;
     z-index: 3;
     animation: slideText 1.5s ease-in-out;
 
     & > h2 {
-      font-size: 170px;
+      font-size: 100px;
     }
 
     & > p {
-      margin-left: 35px;
       font-weight: 700;
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 
