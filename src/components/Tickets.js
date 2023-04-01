@@ -8,7 +8,7 @@ export default function Tickets() {
 
   //
   return (
-    <article>
+    <article className="tickets">
       {list_of_ticket.map((e, i) => {
         return (
           <Ticket

@@ -14,7 +14,7 @@ article.future {
   & > div.videoBG {
     position: relative;
 
-    margin-top: 16%;
+    margin-top: 8%;
     margin-left: 16%;
     min-height: 60%;
 
@@ -42,7 +42,7 @@ article.future {
       right: 0;
       background-color: #1a1717;
       height: 52%;
-      width: 15%;
+      width: 18%;
       z-index: 1;
     }
 
@@ -56,35 +56,35 @@ article.future {
   }
 
   & > div.text-1 {
-    width: 35%;
-    height: 25%;
+    width: 38%;
+    height: 32%;
 
     position: absolute;
-    top: 25%;
-    left: 1%;
+    top: 14%;
+    left: 1.5%;
 
     animation: slideText 1.5s ease-in-out;
     z-index: 3;
     overflow: hidden;
 
     & > h1 {
-      font-size: 40px;
+      font-size: 60px;
     }
 
     & > p {
       font-size: 18px;
       margin-top: 4%;
-      margin-left: 2%;
+      margin-left: 10%;
     }
   }
 
   & > div.text-2 {
     position: absolute;
-    width: 580px;
+    width: 850px;
     height: 70px;
     left: 4%;
-    bottom: 24%;
-    font-size: 40px;
+    bottom: 14%;
+    font-size: 60px;
 
     display: flex;
     align-items: center;
@@ -94,11 +94,11 @@ article.future {
     animation: slideText 1.5s ease-in-out;
 
     & > p {
-      width: 130px;
+      width: 190px;
     }
 
     & > h4 {
-      width: 450px;
+      width: 660px;
       //
       border-right: 5px solid red;
       overflow: hidden;
@@ -109,13 +109,13 @@ article.future {
 
       @keyframes typewriter {
         0% {
-          width: 450px;
+          width: 660px;
         }
         10% {
           width: 0px;
         }
         100% {
-          width: 450px;
+          width: 660px;
         }
       }
       @keyframes blinkTextCursor {
@@ -132,9 +132,9 @@ article.future {
   & > div.text-3 {
     position: absolute;
     width: 20%;
-    height: 20%;
-    right: 11%;
-    bottom: 23%;
+    height: 30%;
+    right: 14%;
+    bottom: 13%;
 
     color: #fff;
     text-align: center;
@@ -144,12 +144,12 @@ article.future {
     animation: slideText 1.5s ease-in-out;
 
     & > h2 {
-      font-size: 100px;
+      font-size: 170px;
     }
 
     & > p {
       font-weight: 700;
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 
@@ -194,6 +194,73 @@ article.future {
     to {
       transform: translateX(0);
       opacity: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  article.future {
+    & > div.videoBG {
+      margin-top: 16%;
+
+      &::after {
+        width: 15%;
+      }
+    }
+
+    & > div.text-1 {
+      width: 35%;
+      height: 25%;
+      top: 25%;
+      left: 1%;
+
+      & > h1 {
+        font-size: 40px;
+      }
+
+      & > p {
+        margin-left: 2%;
+      }
+    }
+
+    & > div.text-2 {
+      width: 580px;
+      bottom: 24%;
+      font-size: 40px;
+
+      & > p {
+        width: 130px;
+      }
+
+      & > h4 {
+        width: 450px;
+
+        @keyframes typewriter {
+          0% {
+            width: 450px;
+          }
+          10% {
+            width: 0px;
+          }
+          100% {
+            width: 450px;
+          }
+        }
+      }
+    }
+
+    & > div.text-3 {
+      height: 20%;
+      right: 11%;
+      bottom: 23%;
+
+      & > h2 {
+        font-size: 100px;
+      }
+
+      & > p {
+        font-size: 20px;
+      }
     }
   }
 }
