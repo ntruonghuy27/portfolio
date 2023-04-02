@@ -14,12 +14,12 @@ article.future {
   & > div.videoBG {
     position: relative;
 
+    display: grid;
+    place-items: center;
+
     margin-top: 8%;
     margin-left: 16%;
     min-height: 60%;
-
-    display: grid;
-    place-items: center;
 
     overflow: hidden;
     animation: slideCDiv 1.5s ease-in-out;
@@ -29,9 +29,11 @@ article.future {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #1a1717;
+
       height: 48%;
       width: 20%;
+
+      background-color: #1a1717;
       z-index: 1;
     }
 
@@ -40,57 +42,61 @@ article.future {
       position: absolute;
       bottom: 0;
       right: 0;
-      background-color: #1a1717;
+
       height: 52%;
       width: 18%;
+
+      background-color: #1a1717;
       z-index: 1;
     }
 
     & > video {
+      position: relative;
+
       height: auto;
       max-width: 80%;
 
       object-fit: cover;
-      position: relative;
     }
   }
 
   & > div.text-1 {
-    width: 38%;
-    height: 32%;
-
     position: absolute;
     top: 14%;
     left: 1.5%;
 
-    animation: slideText 1.5s ease-in-out;
+    width: 38%;
+    height: 32%;
+
     z-index: 3;
     overflow: hidden;
+    animation: slideText 1.5s ease-in-out;
 
     & > h1 {
       font-size: 60px;
     }
 
     & > p {
-      font-size: 18px;
       margin-top: 4%;
       margin-left: 10%;
+      font-size: 18px;
     }
   }
 
   & > div.text-2 {
     position: absolute;
-    width: 850px;
-    height: 70px;
     left: 4%;
     bottom: 14%;
-    font-size: 60px;
 
     display: flex;
     align-items: center;
 
-    overflow: hidden;
+    width: 850px;
+    height: 70px;
+    font-size: 60px;
+
     z-index: 3;
+    overflow: hidden;
     animation: slideText 1.5s ease-in-out;
 
     & > p {
@@ -99,10 +105,9 @@ article.future {
 
     & > h4 {
       width: 660px;
-      //
       border-right: 5px solid red;
-      overflow: hidden;
 
+      overflow: hidden;
       animation: typewriter 10s steps(45) 1s infinite forwards,
         blinkTextCursor 1s steps(45) infinite normal;
       white-space: nowrap;
@@ -131,13 +136,14 @@ article.future {
 
   & > div.text-3 {
     position: absolute;
-    width: 20%;
-    height: 30%;
     right: 14%;
     bottom: 13%;
 
-    color: #fff;
+    width: 20%;
+    height: 30%;
+
     text-align: center;
+    color: #fff;
 
     overflow: hidden;
     z-index: 3;
@@ -211,6 +217,7 @@ article.future {
     & > div.text-1 {
       width: 35%;
       height: 25%;
+
       top: 25%;
       left: 1%;
 

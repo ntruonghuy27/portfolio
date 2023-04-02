@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Damion&family=Roboto&display=swap");
 
 :root {
   --modal-duration: 1s;
@@ -9,24 +11,22 @@ article.tickets {
   height: 190vh;
   width: 100%;
 
-  position: relative;
-
   overflow: hidden;
   background-color: #726b6b;
 
   & > section {
-    width: 20%;
-    height: 20%;
+    position: absolute;
     padding: 5px;
 
     display: grid;
     place-items: center;
 
-    transition: all 0.5s ease-in-out;
-    background-color: #b8b4b4;
-
-    position: absolute;
+    width: 20%;
+    height: 20%;
     border-radius: 10px;
+
+    background-color: #b8b4b4;
+    transition: all 0.5s ease-in-out;
 
     &:nth-child(1) {
       bottom: 17%;
@@ -39,7 +39,7 @@ article.tickets {
 
     &:nth-child(3) {
       top: 20%;
-      left: 37.5%;
+      left: 39.9%;
     }
 
     &:nth-child(4) {
@@ -59,37 +59,49 @@ article.tickets {
     & > img {
       position: absolute;
       bottom: 7%;
+
+      display: block;
+      height: auto;
       width: 80%;
 
-      filter: drop-shadow(0 15px 5px rgba(0, 0, 0, 0.5));
       z-index: 1;
+      filter: drop-shadow(0 15px 5px rgba(0, 0, 0, 0.5));
     }
 
     & > div {
-      padding: 10px;
       position: absolute;
-      width: 100%;
+      left: 0;
+      right: 0;
       bottom: 0;
+
+      width: 99%;
 
       border: 2px solid black;
       border-top: none;
       box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
       border-radius: 10px;
+
       z-index: 0;
-
       overflow: hidden;
-      line-height: 1.5;
-      background-color: #b8b4b4;
-
       transform: translateY(0%);
       opacity: 0%;
 
+      line-height: 1.5;
+      background-color: #b8b4b4;
+
       & > h1 {
-        font-size: 30px;
+        font-family: "Damion", cursive;
+        width: 100%;
+        font-size: 3.5vw;
         text-align: center;
       }
 
       & > p {
+        margin: 5px 0 0 15px;
+        width: 90%;
+
+        font-family: "Roboto", sans-serif;
+        text-align: center;
         font-size: 18px;
       }
     }
@@ -106,67 +118,6 @@ article.tickets {
       & > div {
         transform: translateY(60%);
         opacity: 100%;
-      }
-    }
-  }
-  //
-  & > form {
-    // display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-
-    animation: slideBG 1s linear;
-
-    & > div {
-      margin: 15% auto;
-      width: 60%;
-      height: 30%;
-      display: grid;
-      grid-template-rows: 20% 80%;
-      grid-template-columns: 100%;
-      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
-        0 7px 20px 0 rgba(0, 0, 0, 0.17);
-      animation-name: modalopen;
-      animation-duration: var(--modal-duration);
-      overflow: hidden;
-      animation: slide 3s ease-in-out;
-
-      & > header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        color: #ffffff;
-        background: var(--modal-color);
-        & > span {
-          font-size: 40px;
-          color: #fff;
-          &:hover {
-            color: #000000;
-            cursor: pointer;
-          }
-          &:focus {
-            color: #000000;
-            cursor: pointer;
-          }
-        }
-        & > h2 {
-          line-height: 35px;
-        }
-      }
-
-      & > main {
-        padding: 10px 20px;
-        font-size: 20px;
-        background-color: #ffffff;
       }
     }
   }
@@ -207,6 +158,7 @@ article.tickets {
   article.tickets {
     & > section {
       width: 25%;
+      height: 15%;
 
       &:nth-child(1) {
         bottom: 22%;
@@ -217,6 +169,7 @@ article.tickets {
 
       &:nth-child(3) {
         top: 18%;
+        left: 37%;
       }
 
       &:nth-child(4) {
@@ -229,11 +182,11 @@ article.tickets {
 
       &:hover {
         & > img {
-          transform: translateY(-50%);
+          transform: translateY(-35%);
         }
 
         & > div {
-          transform: translateY(40%);
+          transform: translateY(60%);
         }
       }
     }

@@ -49,47 +49,6 @@ function Ticket(props) {
   );
 }
 
-function Content(props) {
-  const details = props.details;
-
-  return (
-    <div>
-      <h2>Ticket {details.name.at(0).toUpperCase() + details.name.slice(1)}</h2>
-      <main>
-        {details.content.split(" ").map((e) => {
-          if (e !== "<br/>") return e + " ";
-          return <br />;
-        })}
-      </main>
-    </div>
-  );
-}
-
-//
-function Modal(props) {
-  const details = props.details;
-  return (
-    <form>
-      <div>
-        <header>
-          <h2>
-            Ticket {details.name.at(0).toUpperCase() + details.name.slice(1)}
-          </h2>
-          <span className="close" onClick={() => props.setTicket(-1)}>
-            &times;
-          </span>
-        </header>
-        <main>
-          {details.content.split(" ").map((e) => {
-            if (e !== "<br/>") return e + " ";
-            return <br />;
-          })}
-        </main>
-      </div>
-    </form>
-  );
-}
-//
 const list_of_ticket = [
   {
     name: "white",
